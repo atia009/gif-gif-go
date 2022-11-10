@@ -12,7 +12,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Template",
+      title: "Gif Gif Go",
     }),
   ],
   output: {
