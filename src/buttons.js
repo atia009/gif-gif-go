@@ -6,4 +6,16 @@ function startRefreshBtnFunctionality() {
   refreshBtn.onclick = generateImage;
 }
 
-export default startRefreshBtnFunctionality;
+function getInputValue() {
+  return document.querySelector("input").value;
+}
+
+function startSubmitBtnFunctionality() {
+  const submitBtn = document.getElementById("btn-submit");
+
+  submitBtn.onclick = () => {
+    generateImage(getInputValue());
+  };
+}
+
+export { startRefreshBtnFunctionality, startSubmitBtnFunctionality };
