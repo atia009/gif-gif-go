@@ -1,16 +1,20 @@
 import generateImage from "./generateImage";
 
+let currentValue;
+
 function startRefreshBtnFunctionality() {
   const refreshBtn = document.getElementById("btn-refresh");
 
-  refreshBtn.onclick = generateImage;
+  refreshBtn.onclick = () => {
+    generateImage(currentValue);
+  };
 }
 
 function getInputValue() {
   const input = document.querySelector("input");
-  const inputValue = input.value;
+  currentValue = input.value;
   input.value = "";
-  return inputValue;
+  return currentValue;
 }
 
 function startSubmitBtnFunctionality() {
