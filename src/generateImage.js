@@ -7,6 +7,10 @@ function generateImage(field = "dog") {
     .then((response) => response.json())
     .then((response) => {
       img.src = response.data.images.original.url;
+    })
+    .catch(() => {
+      img.src =
+        "https://cdn-images-1.medium.com/max/800/1*qdFdhbR00beEaIKDI_WDCw.gif";
     });
 }
 
