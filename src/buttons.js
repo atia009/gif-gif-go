@@ -7,7 +7,10 @@ function startRefreshBtnFunctionality() {
 }
 
 function getInputValue() {
-  return document.querySelector("input").value;
+  const input = document.querySelector("input");
+  const inputValue = input.value;
+  input.value = "";
+  return inputValue;
 }
 
 function startSubmitBtnFunctionality() {
