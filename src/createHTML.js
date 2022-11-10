@@ -5,7 +5,13 @@ function createHTML() {
   refreshBtn.id = "btn-refresh";
   refreshBtn.textContent = "Refresh";
 
-  document.body.append(img, refreshBtn);
+  const input = document.createElement("input");
+  input.setAttribute("type", "text");
+  input.setAttribute("placeholder", "Search new gif");
+  const submitBtn = document.createElement("button");
+  submitBtn.textContent = "Search";
+
+  document.body.append(img, refreshBtn, input, submitBtn);
 }
 
 export default createHTML;
