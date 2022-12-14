@@ -1,11 +1,11 @@
+import { Img } from "./image";
 import createHTML from "./createHTML";
-import generateImage from "./generateImage";
 import {
   startRefreshBtnFunctionality,
   startSubmitBtnFunctionality,
 } from "./buttons";
 
+Img();
 createHTML();
-generateImage();
 startRefreshBtnFunctionality();
 startSubmitBtnFunctionality();

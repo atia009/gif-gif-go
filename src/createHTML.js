@@ -1,6 +1,4 @@
 function createHTML() {
-  const img = document.createElement("img");
-
   const refreshBtn = document.createElement("button");
   refreshBtn.id = "btn-refresh";
   refreshBtn.textContent = "Refresh";
@@ -12,7 +10,7 @@ function createHTML() {
   submitBtn.id = "btn-submit";
   submitBtn.textContent = "Search";
 
-  document.body.append(img, refreshBtn, input, submitBtn);
+  document.body.append(refreshBtn, input, submitBtn);
 }
 
 export default createHTML;
