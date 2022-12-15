@@ -7,6 +7,10 @@ const Form = () => {
   const btn = document.createElement("button");
   let currentValue;
 
+  // cache DOM
+  form.append(input, btn);
+  appendElementToDOM(form);
+
   // functions
   function setInput() {
     input.setAttribute("type", "text");
@@ -34,10 +38,6 @@ const Form = () => {
 
   setInput();
   setBtn();
-
-  // cache DOM
-  form.append(input, btn);
-  appendElementToDOM(form);
 
   // bind events
   btn.addEventListener("click", startBtnFunctionality);
