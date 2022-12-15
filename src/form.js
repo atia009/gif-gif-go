@@ -1,30 +1,40 @@
 import { setImg } from "./image";
 
 const Form = () => {
+  const form = document.createElement("form");
   const input = document.createElement("input");
-  const submitBtn = document.createElement("button");
+  const btn = document.createElement("button");
   let currentValue;
 
-  input.setAttribute("type", "text");
-  input.setAttribute("placeholder", "Search new gif");
-  submitBtn.id = "btn-submit";
-  submitBtn.textContent = "Search";
+  btn.textContent = "Search";
 
   // functions
-  function getInputValue() {
-    currentValue = input.value;
-    input.value = "";
+  function setInput() {
+    input.setAttribute("type", "text");
+    input.setAttribute("placeholder", "Search new gif");
+  }
+
+  function getCurrentValue() {
     return currentValue;
   }
 
-  function startSubmitBtnFunctionality() {
-    submitBtn.onclick = () => {
-      setImg(getInputValue());
-    };
+  function updateCurrentValue() {
+    currentValue = input.value;
+    input.value = "";
   }
 
-  startSubmitBtnFunctionality();
-  document.body.append(input, submitBtn);
+  function startBtnFunctionality() {
+    updateCurrentValue();
+    setImg(getCurrentValue());
+  }
+
+  setInput();
+
+  // cache DOM
+  document.body.append(input, btn);
+
+  // bind events
+  btn.addEventListener("click", startBtnFunctionality);
 };
 
 export default Form;
