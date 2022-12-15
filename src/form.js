@@ -1,4 +1,5 @@
 import { setImg } from "./image";
+import appendElementToDOM from "./helper-functions";
 
 const Form = () => {
   const form = document.createElement("form");
@@ -31,7 +32,8 @@ const Form = () => {
   setInput();
 
   // cache DOM
-  document.body.append(input, btn);
+  form.append(input, btn);
+  appendElementToDOM(form);
 
   // bind events
   btn.addEventListener("click", startBtnFunctionality);
