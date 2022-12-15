@@ -1,3 +1,5 @@
+import appendElementToDOM from "./helper-functions";
+
 function setImg(query = "dog") {
   const img = document.querySelector("img");
   fetch(
@@ -18,7 +20,7 @@ const Img = () => {
   const img = document.createElement("img");
 
   // cache DOM
-  document.body.append(img);
+  appendElementToDOM(img);
 
   setImg();
 };
