@@ -1,11 +1,5 @@
 import { Img } from "./image";
-import createHTML from "./createHTML";
-import {
-  startRefreshBtnFunctionality,
-  startSubmitBtnFunctionality,
-} from "./buttons";
+import Refresh from "./refresh";
 
 Img();
-createHTML();
-startRefreshBtnFunctionality();
-startSubmitBtnFunctionality();
+Refresh();
