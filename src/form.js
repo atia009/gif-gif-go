@@ -7,12 +7,15 @@ const Form = () => {
   const btn = document.createElement("button");
   let currentValue;
 
-  btn.textContent = "Search";
-
   // functions
   function setInput() {
     input.setAttribute("type", "text");
     input.setAttribute("placeholder", "Search new gif");
+  }
+
+  function setBtn() {
+    btn.textContent = "Search";
+    btn.setAttribute("type", "button");
   }
 
   function getCurrentValue() {
@@ -30,6 +33,7 @@ const Form = () => {
   }
 
   setInput();
+  setBtn();
 
   // cache DOM
   form.append(input, btn);
