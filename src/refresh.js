@@ -3,10 +3,16 @@ import { setImg } from "./image";
 
 const Refresh = () => {
   const btn = document.createElement("button");
-  btn.textContent = "Refresh";
 
   // cache DOM
   appendElementToDOM(btn);
+
+  // functions
+  function setBtn() {
+    btn.textContent = "Refresh";
+  }
+
+  setBtn();
 
   // bind events
   btn.addEventListener("click", setImg);
