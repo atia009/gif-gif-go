@@ -5,7 +5,6 @@ const Form = () => {
   const form = document.createElement("form");
   const input = document.createElement("input");
   const btn = document.createElement("button");
-  let currentValue;
 
   // cache DOM
   form.append(input, btn);
@@ -22,18 +21,9 @@ const Form = () => {
     btn.setAttribute("type", "button");
   }
 
-  function getCurrentValue() {
-    return currentValue;
-  }
-
-  function updateCurrentValue() {
-    currentValue = input.value;
-    input.value = "";
-  }
-
   function startBtnFunctionality() {
-    updateCurrentValue();
-    setImg(getCurrentValue());
+    setImg(input.value);
+    input.value = "";
   }
 
   setInput();

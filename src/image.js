@@ -1,8 +1,15 @@
 import appendElementToDOM from "./helper-functions";
 
+let currentValue;
+
+function getCurrentValue(text) {
+  currentValue = typeof text === "string" ? text : currentValue;
+  return currentValue;
+}
+
 function setImg(text = "dog") {
   const img = document.querySelector("img");
-  const query = typeof text === "string" ? text : "dog";
+  const query = getCurrentValue(text);
   fetch(
     `https://api.giphy.com/v1/gifs/translate?api_key=z4Q6aWFpoFeVBHp9mnmPPOmpENLtL8rG&s=${query}`,
     { mode: "cors" }
