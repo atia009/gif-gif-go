@@ -1,7 +1,8 @@
 import appendElementToDOM from "./helper-functions";
 
-function setImg(query = "dog") {
+function setImg(text = "dog") {
   const img = document.querySelector("img");
+  const query = typeof text === "string" ? text : "dog";
   fetch(
     `https://api.giphy.com/v1/gifs/translate?api_key=z4Q6aWFpoFeVBHp9mnmPPOmpENLtL8rG&s=${query}`,
     { mode: "cors" }
